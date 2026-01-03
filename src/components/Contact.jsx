@@ -12,48 +12,56 @@ const Contact = () => {
         <section id="contact" className="section contact-section">
             <div className="container">
                 <div className="contact-wrapper fade-on-scroll visible">
-                    <div className="contact-info">
-                        <h2>{t('contact.title')}</h2>
-                        <p className="contact-subtitle">{t('contact.subtitle')}</p>
+                    <div className="contact-info-card">
+                        <div className="contact-info-header">
+                            <h2>{t('contact.title')}</h2>
+                            <p className="contact-subtitle">{t('contact.subtitle')}</p>
+                        </div>
 
-                        <div className="contact-details">
-                            <div className="detail-item">
-                                <i className="fa-solid fa-location-dot"></i>
-                                <div>
-                                    <strong>{t('contact.address')}</strong>
-                                    <p>{t('contact.addressText')}</p>
+                        <div className="contact-details-list">
+                            <div className="detail-item-premium">
+                                <div className="detail-icon-box">
+                                    <i className="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div className="detail-text">
+                                    <span className="detail-label">{t('contact.address')}</span>
+                                    <p className="detail-value">{t('contact.addressText')}</p>
                                 </div>
                             </div>
 
-                            <div className="detail-item">
-                                <i className="fa-solid fa-phone"></i>
-                                <div>
-                                    <strong>{t('contact.phone')}</strong>
-                                    <p>+237 696 193 409</p>
+                            <div className="detail-item-premium">
+                                <div className="detail-icon-box">
+                                    <i className="fa-solid fa-phone"></i>
+                                </div>
+                                <div className="detail-text">
+                                    <span className="detail-label">{t('contact.phone')}</span>
+                                    <p className="detail-value">+237 696 193 409</p>
                                 </div>
                             </div>
 
-                            <div className="detail-item">
-                                <i className="fa-solid fa-clock"></i>
-                                <div>
-                                    <strong>{t('contact.hours')}</strong>
-                                    <p>{t('contact.hoursText')}</p>
+                            <div className="detail-item-premium">
+                                <div className="detail-icon-box">
+                                    <i className="fa-solid fa-clock"></i>
+                                </div>
+                                <div className="detail-text">
+                                    <span className="detail-label">{t('contact.hours')}</span>
+                                    <p className="detail-value">{t('contact.hoursText')}</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="contact-actions">
-                            <a href="https://www.google.com/maps/dir//Entr%C3%A9e+Gendarmerie+Cit%C3%A9+Sic,+Douala"
-                                target="_blank" className="btn btn-outline btn-map">
+                        <div className="contact-actions-premium">
+                            <a href="https://www.google.com/maps/dir//Entrée+Gendarmerie+Cité+Sic,+Douala"
+                                target="_blank" className="btn-premium-outline">
                                 <i className="fa-solid fa-location-arrow"></i> {t('contact.directions')}
                             </a>
-                            <a href="https://wa.me/237696193409" className="btn btn-primary btn-whatsapp-large">
+                            <a href="https://wa.me/237696193409" className="btn-premium-whatsapp">
                                 <i className="fa-brands fa-whatsapp"></i> {t('contact.whatsapp')}
                             </a>
                         </div>
                     </div>
 
-                    <div className="map-container">
+                    <div className="map-container-premium">
                         <iframe
                             src={mapUrl}
                             width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"

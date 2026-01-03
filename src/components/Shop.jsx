@@ -1,7 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import { products } from '../data/products';
+import { useLanguage } from '../context/LanguageContext';
 
 const Shop = () => {
+    const { t } = useLanguage();
     const [filterTag, setFilterTag] = useState('all');
     const [filterCapacity, setFilterCapacity] = useState(null);
 
@@ -67,8 +69,8 @@ const Shop = () => {
         <section id="shop" className="section shop-section">
             <div className="container container-wide">
                 <div className="section-header fade-on-scroll visible">
-                    <h2>Le meilleur de l'iPhone.</h2>
-                    <p>Choisissez votre modèle idéal.</p>
+                    <h2>{t('shop.title')}</h2>
+                    <p>{t('shop.subtitle')}</p>
                 </div>
 
                 {/* Series Filters */}
@@ -79,7 +81,7 @@ const Shop = () => {
                             className={`filter-btn ${!filterCapacity && filterTag === tag ? 'active' : ''}`}
                             onClick={() => handleTagFilter(tag)}
                         >
-                            {tag === 'all' ? 'Tout' : tag === 'old' ? 'Autres' : `Série ${tag}`}
+                            {tag === 'all' ? t('shop.all') : tag === 'old' ? t('shop.others') : `${t('shop.series')} ${tag}`}
                         </button>
                     ))}
                 </div>
@@ -113,7 +115,7 @@ const Shop = () => {
                                 <div className="product-info series-info">
                                     <div className="product-header">
                                         <h3>{group.name}</h3>
-                                        {(group.tag === '16' || group.tag === '15') && <span className="badge-new">Promo</span>}
+                                        {(group.tag === '16' || group.tag === '15') && <span className="badge-new">{t('shop.promo')}</span>}
                                     </div>
                                     <div className="model-list visible">
                                         {group.items.map((item, idx) => {
@@ -127,7 +129,7 @@ const Shop = () => {
                                                         <span className="model-name">{item.name}</span>
                                                         <span className="model-cap">
                                                             {item.capacity} {item.origin ? `• ${item.origin}` : ''}
-                                                            {isCheapest && <span style={{ color: '#FFD700', fontSize: '10px', marginLeft: '5px', fontWeight: 700 }}>★ Meilleur Prix</span>}
+                                                            {isCheapest && <span style={{ color: '#FFD700', fontSize: '10px', marginLeft: '5px', fontWeight: 700 }}>★ {t('shop.bestPrice')}</span>}
                                                         </span>
                                                     </div>
                                                     <div className="model-price-container">

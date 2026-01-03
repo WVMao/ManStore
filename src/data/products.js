@@ -37,6 +37,6 @@ export const products = [
     { name: "iPhone 11", capacity: "128GB", price: "95.000 FCFA", img: "assets/iphone11_series.png", tag: "11", origin: "🇩🇪" },
 
     // Older Models
-    { name: "iPhone XR", capacity: "128GB", price: "75.000 FCFA", img: "assets/iphone11_series.png", tag: "old" },
+    { name: "iPhone XR", capacity: "128GB", price: "75.000 FCFA", img: "assets/iphone_xr.png", tag: "old" },
     { name: "iPhone 8 Plus", capacity: "64GB", price: "55.000 FCFA", img: "assets/iphone8plus.png", tag: "old" }
 ];

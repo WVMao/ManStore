@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Hero = () => {
+    const { t } = useLanguage();
     const images = [
         'assets/hero_suite.png',
         'assets/hero_slide_2.png',
@@ -17,8 +19,8 @@ const Hero = () => {
             setIsFading(true);
             setTimeout(() => {
                 setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-            }, 500); // Wait for fade out transition (0.5s) to complete before switching source
-        }, 3500); // Total cycle time (3s view + 0.5s transition)
+            }, 500);
+        }, 3500);
 
         return () => clearInterval(interval);
     }, [images.length]);
@@ -31,12 +33,12 @@ const Hero = () => {
         <section className="hero-section" id="hero">
             <div className="hero-container">
                 <div className="hero-text">
-                    <span className="hero-badge fade-in-up">Nouveau Arrivage</span>
-                    <h1 className="fade-in-up delay-1">L'Excellence <br /><span className="gradient-text">iPhone 15 Pro.</span></h1>
-                    <p className="fade-in-up delay-2">Découvrez la puissance du titane. Plus léger, plus robuste, plus Pro que jamais. Disponible dès maintenant chez ManStore.</p>
+                    <span className="hero-badge fade-in-up">{t('hero.badge')}</span>
+                    <h1 className="fade-in-up delay-1">{t('hero.title')}</h1>
+                    <p className="fade-in-up delay-2">{t('hero.subtitle')}</p>
                     <div className="hero-cta fade-in-up delay-3">
-                        <a href="#shop" className="btn btn-primary">Acheter Maintenant</a>
-                        <a href="#contact" className="btn btn-outline">En Savoir Plus <i className="fa-solid fa-arrow-right"></i></a>
+                        <a href="#shop" className="btn btn-primary">{t('hero.cta')}</a>
+                        <a href="#contact" className="btn btn-outline">{t('hero.learn')} <i className="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div className="hero-image-container">

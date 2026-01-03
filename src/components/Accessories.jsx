@@ -1,29 +1,59 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Accessories = () => {
+    const { t } = useLanguage();
     return (
         <section id="accessories" className="section accessories-section">
             <div className="container">
                 <div className="section-header fade-on-scroll visible">
-                    <h2>Essentiels MagSafe & Audio.</h2>
-                    <p>Complétez votre expérience.</p>
+                    <h2>{t('accessories.title')}</h2>
+                    <p>{t('accessories.subtitle')}</p>
                 </div>
 
                 <div className="accessories-grid">
-                    {/* Large Feature Item */}
-                    <div className="acc-card large fade-on-scroll visible">
-                        <img src="assets/airpods.png" alt="AirPods Pro 2" className="acc-img-main" />
-                        <div className="acc-details">
-                            <h3>AirPods Pro 2</h3>
-                            <p>Réduction de bruit active. Audio spatial.</p>
-                            <span className="acc-price">10.000 FCFA</span>
-                            <a
-                                href="https://wa.me/237696193409?text=Je veux commander les AirPods Pro 2"
-                                className="btn btn-primary"
-                                style={{ backgroundColor: '#25D366', color: 'white', border: 'none', marginTop: '15px' }}
-                            >
-                                <i className="fa-brands fa-whatsapp" style={{ marginRight: '8px' }}></i> Commander
-                            </a>
+                    {/* AirPods Card - Horizontal Layout */}
+                    <div className="product-card fade-on-scroll visible" style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        gap: '30px',
+                        alignItems: 'center',
+                        padding: '30px'
+                    }}>
+                        <div style={{
+                            flex: '0 0 300px',
+                            background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
+                            boxShadow: 'inset 0 2px 10px rgba(0,0,0,0.05)',
+                            borderRadius: '30px',
+                            overflow: 'hidden',
+                            height: '300px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                        }}>
+                            <img src="assets/airpods.png" alt="AirPods Pro 2" style={{
+                                maxHeight: '100%',
+                                maxWidth: '100%',
+                                objectFit: 'contain',
+                                filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.15))'
+                            }} />
+                        </div>
+                        <div style={{ flex: '1' }}>
+                            <h3 style={{ marginBottom: '20px' }}>{t('accessories.airpods.name')}</h3>
+                            <div className="model-list visible">
+                                <div className="model-row" style={{ borderBottom: 'none' }}>
+                                    <div className="model-info">
+                                        <span className="model-name">{t('accessories.airpods.name')}</span>
+                                        <span className="model-cap">{t('accessories.airpods.desc')}</span>
+                                    </div>
+                                    <div className="model-price-container">
+                                        <span className="model-price">10.000 FCFA</span>
+                                        <a href={`https://wa.me/237696193409?text=${t('common.order')} ${t('accessories.airpods.name')}`} className="btn-icon">
+                                            <i className="fa-brands fa-whatsapp"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -32,94 +62,75 @@ const Accessories = () => {
 
                         <AccessoryItem
                             icon="fa-solid fa-bolt"
-                            title="Fast Charger 20W"
-                            desc="Charge Rapide iPhone"
+                            titleKey="accessories.items.fastCharger"
+                            descKey="accessories.items.fastChargerDesc"
                             price="5.000 FCFA"
-                            waText="Je veux commander le Fast Charger 20W"
                         />
                         <AccessoryItem
                             icon="fa-solid fa-plug"
-                            title="Boîtier iPhone (Type C)"
-                            desc="Adaptateur Secteur 20W"
+                            titleKey="accessories.items.caseTypeC"
+                            descKey="accessories.items.caseTypeCDesc"
                             price="3.000 FCFA"
-                            waText="Je veux commander le Boîtier iPhone (Type C)"
                         />
                         <AccessoryItem
                             icon="fa-solid fa-plug"
-                            title="Boîtier iPhone (USB)"
-                            desc="Adaptateur classique"
+                            titleKey="accessories.items.caseUSB"
+                            descKey="accessories.items.caseUSBDesc"
                             price="2.000 FCFA"
-                            waText="Je veux commander le Boîtier iPhone (USB)"
                         />
                         <AccessoryItem
                             icon="fa-solid fa-battery-full"
-                            title="Chargeur Android (Complet)"
-                            desc="Adaptateur + Câble"
+                            titleKey="accessories.items.androidCharger"
+                            descKey="accessories.items.androidChargerDesc"
                             price="4.500 FCFA"
-                            waText="Je veux commander le Chargeur Android Complet"
                         />
                         <AccessoryItem
                             icon="fa-brands fa-usb"
-                            title="Cordon iPhone (Type C)"
-                            desc="Câble de charge rapide"
+                            titleKey="accessories.items.cableTypeC"
+                            descKey="accessories.items.cableTypeCDesc"
                             price="2.000 FCFA"
-                            waText="Je veux commander le Cordon iPhone (Type C)"
                         />
                         <AccessoryItem
                             icon="fa-brands fa-usb"
-                            title="Cordon iPhone (USB)"
-                            desc="Câble Lightning standard"
+                            titleKey="accessories.items.cableUSB"
+                            descKey="accessories.items.cableUSBDesc"
                             price="1.000 FCFA"
-                            waText="Je veux commander le Cordon iPhone (USB)"
                         />
                         <AccessoryItem
                             icon="fa-brands fa-android"
-                            title="Cordon Android"
-                            desc="Câble de charge universel"
+                            titleKey="accessories.items.androidCable"
+                            descKey="accessories.items.androidCableDesc"
                             price="1.000 FCFA"
-                            waText="Je veux commander le Cordon Android"
                         />
                         <AccessoryItem
                             icon="fa-solid fa-headphones"
-                            title="Écouteur iPhone"
-                            desc="Lightning Audio"
+                            titleKey="accessories.items.earphones"
+                            descKey="accessories.items.earphonesDesc"
                             price="3.000 FCFA"
-                            waText="Je veux commander les Écouteurs iPhone"
                         />
                         <AccessoryItem
                             icon="fa-solid fa-headphones-simple"
-                            title="Écouteur Android"
-                            desc="Jack 3.5mm universel"
+                            titleKey="accessories.items.earphonesAndroid"
+                            descKey="accessories.items.earphonesAndroidDesc"
                             price="2.000 FCFA"
-                            waText="Je veux commander les Écouteurs Android"
                         />
                         <AccessoryItem
                             icon="fa-solid fa-mobile-screen"
-                            title="Pochette iPhone Transparente"
-                            desc="Protection MagSafe Clear"
+                            titleKey="accessories.items.caseClear"
+                            descKey="accessories.items.caseClearDesc"
                             price="4.500 FCFA"
-                            waText="Je veux commander la Pochette iPhone Transparente"
                         />
                         <AccessoryItem
-                            icon="fa-solid fa-mobile"
-                            title="Pochette iPhone Silicone"
-                            desc="Toutes couleurs disponibles"
+                            icon="fa-solid fa-mobile-screen"
+                            titleKey="accessories.items.caseSilicone"
+                            descKey="accessories.items.caseSiliconeDesc"
                             price="3.000 FCFA"
-                            waText="Je veux commander la Pochette iPhone Silicone"
                         />
                         <AccessoryItem
-                            icon="fa-solid fa-shield-cat"
-                            title="Glace Fumée iPhone"
-                            desc="Confidentialité & Protection"
+                            icon="fa-solid fa-shield"
+                            titleKey="accessories.items.screenProtector"
+                            descKey="accessories.items.screenProtectorDesc"
                             price="1.500 FCFA"
-                            waText="Je veux commander la Glace Fumée iPhone"
-                        />
-                        <AccessoryItem
-                            icon="fa-solid fa-shield-halved"
-                            title="Glace iPhone"
-                            desc="Protection écran 9D"
-                            price="1.000 FCFA"
-                            waText="Je veux commander la Glace iPhone"
                         />
 
                     </div>
@@ -129,22 +140,28 @@ const Accessories = () => {
     );
 };
 
-const AccessoryItem = ({ icon, title, desc, price, waText }) => (
-    <div className="model-row" style={{ padding: '15px 0', borderBottom: '1px solid #333' }}>
-        <div className="model-info">
-            <span className="model-name" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <i className={icon} style={{ color: '#666', width: '20px' }}></i>
-                {title}
-            </span>
-            <span className="model-cap">{desc}</span>
+const AccessoryItem = ({ icon, titleKey, descKey, title, desc, price }) => {
+    const { t } = useLanguage();
+    const displayTitle = titleKey ? t(titleKey) : title;
+    const displayDesc = descKey ? t(descKey) : desc;
+
+    return (
+        <div className="model-row" style={{ padding: '15px 0', borderBottom: '1px solid #333' }}>
+            <div className="model-info">
+                <span className="model-name" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <i className={icon} style={{ color: '#666', width: '20px' }}></i>
+                    {displayTitle}
+                </span>
+                <span className="model-cap">{displayDesc}</span>
+            </div>
+            <div className="model-price-container">
+                <span className="model-price">{price}</span>
+                <a href={`https://wa.me/237696193409?text=${t('common.order')} ${displayTitle}`} className="btn-icon">
+                    <i className="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
         </div>
-        <div className="model-price-container">
-            <span className="model-price">{price}</span>
-            <a href={`https://wa.me/237696193409?text=${waText}`} className="btn-icon">
-                <i className="fa-brands fa-whatsapp"></i>
-            </a>
-        </div>
-    </div>
-);
+    );
+};
 
 export default Accessories;

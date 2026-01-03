@@ -1,29 +1,32 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Testimonials = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="testimonials" className="section testimonials-section">
             <div className="container">
                 <div className="section-header fade-on-scroll visible">
-                    <h2>Ce qu'ils disent.</h2>
-                    <p>La satisfaction client avant tout.</p>
+                    <h2>{t('testimonials.title')}</h2>
+                    <p>{t('testimonials.subtitle')}</p>
                 </div>
 
                 <div className="testimonials-grid fade-on-scroll visible">
                     <TestimonialCard
                         name="Franck M."
                         location="Douala"
-                        text="J'ai pris mon iPhone 14 Pro Max ici, service impeccable. Livraison rapide à Douala. Je ne regrette pas mon achat chez ManStore."
+                        text={t('testimonials.review1')}
                     />
                     <TestimonialCard
                         name="Sarah N."
                         location="Yaoundé"
-                        text="Les prix sont vraiment bons. J'ai aimé la transparence sur l'état du téléphone. Je recommande vivement pour ceux qui cherchent la qualité."
+                        text={t('testimonials.review2')}
                     />
                     <TestimonialCard
                         name="Lionel E."
                         location="Bafoussam"
-                        text="Vendeur sérieux. J'ai reçu mon colis comme prévu. Le téléphone est nickel, aucune rayure, batterie à 100%."
+                        text={t('testimonials.review3')}
                     />
                 </div>
             </div>

@@ -42,7 +42,6 @@ function App() {
             <Testimonials />
             <Contact />
             <Footer />
-            <FloatingWhatsApp />
         </>
     );
 }

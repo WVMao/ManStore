@@ -123,7 +123,6 @@ const Navbar = () => {
                             </div>
                         )}
                     </div>
-                    <a href="https://wa.me/237696193409" className="nav-btn-mobile"><i className="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </nav>

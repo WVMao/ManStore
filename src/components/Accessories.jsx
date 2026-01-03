@@ -13,11 +13,11 @@ const Accessories = () => {
 
                 <div className="accessories-grid">
                     {/* AirPods Card - Horizontal Layout */}
-                    <div className="product-card airpods-premium-card fade-on-scroll visible">
-                        <div className="airpods-image-container">
+                    <div className="product-card airpods-premium-card fade-on-scroll visible" style={{ display: 'flex', flexWrap: 'wrap' }}>
+                        <div className="airpods-image-container" style={{ flex: '1 1 300px' }}>
                             <img src="assets/airpods.png" alt="AirPods Pro 2" className="airpods-img-main" />
                         </div>
-                        <div className="airpods-content-box">
+                        <div className="airpods-content-box" style={{ flex: '1 1 300px', minWidth: '300px' }}>
                             <h3 className="airpods-title">{t('accessories.airpods.name')}</h3>
                             <div className="model-list visible">
                                 <div className="model-row" style={{ borderBottom: 'none' }}>

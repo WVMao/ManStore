@@ -13,33 +13,12 @@ const Accessories = () => {
 
                 <div className="accessories-grid">
                     {/* AirPods Card - Horizontal Layout */}
-                    <div className="product-card fade-on-scroll visible" style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        gap: '30px',
-                        alignItems: 'center',
-                        padding: '30px'
-                    }}>
-                        <div style={{
-                            flex: '0 0 300px',
-                            background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
-                            boxShadow: 'inset 0 2px 10px rgba(0,0,0,0.05)',
-                            borderRadius: '30px',
-                            overflow: 'hidden',
-                            height: '300px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center'
-                        }}>
-                            <img src="assets/airpods.png" alt="AirPods Pro 2" style={{
-                                maxHeight: '100%',
-                                maxWidth: '100%',
-                                objectFit: 'contain',
-                                filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.15))'
-                            }} />
+                    <div className="product-card airpods-premium-card fade-on-scroll visible">
+                        <div className="airpods-image-container">
+                            <img src="assets/airpods.png" alt="AirPods Pro 2" className="airpods-img-main" />
                         </div>
-                        <div style={{ flex: '1' }}>
-                            <h3 style={{ marginBottom: '20px' }}>{t('accessories.airpods.name')}</h3>
+                        <div className="airpods-content-box">
+                            <h3 className="airpods-title">{t('accessories.airpods.name')}</h3>
                             <div className="model-list visible">
                                 <div className="model-row" style={{ borderBottom: 'none' }}>
                                     <div className="model-info">

@@ -20,33 +20,21 @@ const Contact = () => {
 
                         <div className="contact-details-list">
                             <div className="detail-item-premium">
-                                <div className="detail-icon-box">
-                                    <i className="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div className="detail-text">
-                                    <span className="detail-label">{t('contact.address')}</span>
-                                    <p className="detail-value">{t('contact.addressText')}</p>
-                                </div>
+                                <i className="fa-solid fa-location-dot detail-icon"></i>
+                                <span className="detail-label">{t('contact.address')}</span>
+                                <p className="detail-value">{t('contact.addressText')}</p>
                             </div>
 
                             <div className="detail-item-premium">
-                                <div className="detail-icon-box">
-                                    <i className="fa-solid fa-phone"></i>
-                                </div>
-                                <div className="detail-text">
-                                    <span className="detail-label">{t('contact.phone')}</span>
-                                    <p className="detail-value">+237 696 193 409</p>
-                                </div>
+                                <i className="fa-solid fa-phone detail-icon"></i>
+                                <span className="detail-label">{t('contact.phone')}</span>
+                                <p className="detail-value">+237 696 193 409</p>
                             </div>
 
                             <div className="detail-item-premium">
-                                <div className="detail-icon-box">
-                                    <i className="fa-solid fa-clock"></i>
-                                </div>
-                                <div className="detail-text">
-                                    <span className="detail-label">{t('contact.hours')}</span>
-                                    <p className="detail-value">{t('contact.hoursText')}</p>
-                                </div>
+                                <i className="fa-solid fa-clock detail-icon"></i>
+                                <span className="detail-label">{t('contact.hours')}</span>
+                                <p className="detail-value">{t('contact.hoursText')}</p>
                             </div>
                         </div>
 

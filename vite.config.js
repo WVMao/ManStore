@@ -6,7 +6,7 @@ export default defineConfig({
     plugins: [react()],
     base: '/ManStore/',
     build: {
-        outDir: 'build_output',
+        outDir: 'dist_prod',
         emptyOutDir: true,
     }
 })

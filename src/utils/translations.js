@@ -84,7 +84,9 @@ export const translations = {
         // Common
         common: {
             price: "FCFA",
-            order: "Commander"
+            order: "Commander",
+            currencySymbol: "FCFA",
+            currencyRate: 1
         }
     },
     en: {
@@ -171,8 +173,10 @@ export const translations = {
         },
         // Common
         common: {
-            price: "FCFA",
-            order: "Order"
+            price: "USD",
+            order: "Order",
+            currencySymbol: "$",
+            currencyRate: 0.0016
         }
     },
     es: {
@@ -259,8 +263,10 @@ export const translations = {
         },
         // Common
         common: {
-            price: "FCFA",
-            order: "Pedir"
+            price: "EUR",
+            order: "Pedir",
+            currencySymbol: "€",
+            currencyRate: 0.001524
         }
     },
     it: {
@@ -347,8 +353,10 @@ export const translations = {
         },
         // Common
         common: {
-            price: "FCFA",
-            order: "Ordina"
+            price: "EUR",
+            order: "Ordina",
+            currencySymbol: "€",
+            currencyRate: 0.001524
         }
     },
     zh: {
@@ -435,8 +443,10 @@ export const translations = {
         },
         // Common
         common: {
-            price: "FCFA",
-            order: "订购"
+            price: "CNY",
+            order: "订购",
+            currencySymbol: "¥",
+            currencyRate: 0.0116
         }
     }
 };

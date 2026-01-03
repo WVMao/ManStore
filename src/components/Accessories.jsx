@@ -2,7 +2,7 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Accessories = () => {
-    const { t } = useLanguage();
+    const { t, formatPrice } = useLanguage();
     return (
         <section id="accessories" className="section accessories-section">
             <div className="container">
@@ -47,8 +47,8 @@ const Accessories = () => {
                                         <span className="model-cap">{t('accessories.airpods.desc')}</span>
                                     </div>
                                     <div className="model-price-container">
-                                        <span className="model-price">10.000 FCFA</span>
-                                        <a href={`https://wa.me/237696193409?text=${t('common.order')} ${t('accessories.airpods.name')}`} className="btn-icon">
+                                        <span className="model-price">{formatPrice("10.000 FCFA")}</span>
+                                        <a href={`https://wa.me/237696193409?text=${t('common.order')} ${t('accessories.airpods.name')} (${formatPrice("10.000 FCFA")})`} className="btn-icon">
                                             <i className="fa-brands fa-whatsapp"></i>
                                         </a>
                                     </div>
@@ -141,7 +141,7 @@ const Accessories = () => {
 };
 
 const AccessoryItem = ({ icon, titleKey, descKey, title, desc, price }) => {
-    const { t } = useLanguage();
+    const { t, formatPrice } = useLanguage();
     const displayTitle = titleKey ? t(titleKey) : title;
     const displayDesc = descKey ? t(descKey) : desc;
 
@@ -155,8 +155,8 @@ const AccessoryItem = ({ icon, titleKey, descKey, title, desc, price }) => {
                 <span className="model-cap">{displayDesc}</span>
             </div>
             <div className="model-price-container">
-                <span className="model-price">{price}</span>
-                <a href={`https://wa.me/237696193409?text=${t('common.order')} ${displayTitle}`} className="btn-icon">
+                <span className="model-price">{formatPrice(price)}</span>
+                <a href={`https://wa.me/237696193409?text=${t('common.order')} ${displayTitle} (${formatPrice(price)})`} className="btn-icon">
                     <i className="fa-brands fa-whatsapp"></i>
                 </a>
             </div>

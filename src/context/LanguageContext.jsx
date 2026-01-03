@@ -25,8 +25,31 @@ export const LanguageProvider = ({ children }) => {
         return value || key;
     };
 
+    const formatPrice = (priceStr) => {
+        if (!priceStr) return "";
+
+        // Extract number from FCFA string (e.g., "650.000 FCFA" -> 650000)
+        const numericValue = parseFloat(priceStr.replace(/[^0-9]/g, ''));
+
+        const rate = translations[language].common.currencyRate;
+        const symbol = translations[language].common.currencySymbol;
+        const converted = numericValue * rate;
+
+        if (language === 'fr') {
+            return `${numericValue.toLocaleString('fr-FR')} FCFA`;
+        }
+
+        // Format other currencies
+        const formatted = converted.toLocaleString(language === 'zh' ? 'zh-CN' : 'en-US', {
+            minimumFractionDigits: (language === 'zh') ? 0 : 2,
+            maximumFractionDigits: (language === 'zh') ? 0 : 2
+        });
+
+        return language === 'zh' ? `${symbol}${formatted}` : `${symbol}${formatted}`;
+    };
+
     return (
-        <LanguageContext.Provider value={{ language, setLanguage, t }}>
+        <LanguageContext.Provider value={{ language, setLanguage, t, formatPrice }}>
             {children}
         </LanguageContext.Provider>
     );

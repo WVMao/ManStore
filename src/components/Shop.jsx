@@ -3,7 +3,7 @@ import { products } from '../data/products';
 import { useLanguage } from '../context/LanguageContext';
 
 const Shop = () => {
-    const { t } = useLanguage();
+    const { t, formatPrice } = useLanguage();
     const [filterTag, setFilterTag] = useState('all');
     const [filterCapacity, setFilterCapacity] = useState(null);
 
@@ -133,8 +133,8 @@ const Shop = () => {
                                                         </span>
                                                     </div>
                                                     <div className="model-price-container">
-                                                        <span className="model-price" style={isCheapest ? { color: '#FFD700' } : {}}>{item.price}</span>
-                                                        <a href={`https://wa.me/237696193409?text=Je suis intéressé par ${item.name} ${item.capacity} (Offre: ${item.price})`} className="btn-icon">
+                                                        <span className="model-price" style={isCheapest ? { color: '#FFD700' } : {}}>{formatPrice(item.price)}</span>
+                                                        <a href={`https://wa.me/237696193409?text=${t('common.order')} ${item.name} ${item.capacity} (${formatPrice(item.price)})`} className="btn-icon">
                                                             <i className="fa-brands fa-whatsapp"></i>
                                                         </a>
                                                     </div>

@@ -115,7 +115,7 @@ const Shop = () => {
                                         <h3>{group.name}</h3>
                                         {(group.tag === '16' || group.tag === '15') && <span className="badge-new">Promo</span>}
                                     </div>
-                                    <div className="model-list">
+                                    <div className="model-list visible">
                                         {group.items.map((item, idx) => {
                                             const currentPrice = parseInt(item.price.replace(/\./g, '').replace(' FCFA', ''));
                                             const count = group.items.filter(i => i.name === item.name).length;

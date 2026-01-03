@@ -522,19 +522,18 @@ img {
 
 .model-name {
     font-weight: 500;
-    color: #ddd;
+    color: #ffffff !important;
     display: block;
     font-size: 15px;
 }
 
 .model-cap {
-    color: #666;
+    color: #999 !important;
     font-size: 13px;
 }
 
 .model-price {
-    color: white;
-    /* White Price */
+    color: #ffffff !important;
     font-weight: 700;
     font-size: 15px;
     display: block;
@@ -985,12 +984,114 @@ footer {
 .fade-on-scroll {
     opacity: 0;
     transform: translateY(30px);
-    transition: 0.6s;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    filter: blur(10px);
+    will-change: opacity, transform, filter;
 }
 
 .fade-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
+    filter: blur(0);
+}
+
+/* Staggered Animation for Accessory List Items */
+.model-list .model-row {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: 0.5s ease-out;
+}
+
+.model-list.visible .model-row {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.model-list.visible .model-row:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.model-list.visible .model-row:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.model-list.visible .model-row:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.model-list.visible .model-row:nth-child(4) {
+    transition-delay: 0.25s;
+}
+
+.model-list.visible .model-row:nth-child(5) {
+    transition-delay: 0.3s;
+}
+
+.model-list.visible .model-row:nth-child(6) {
+    transition-delay: 0.35s;
+}
+
+.model-list.visible .model-row:nth-child(7) {
+    transition-delay: 0.4s;
+}
+
+.model-list.visible .model-row:nth-child(8) {
+    transition-delay: 0.45s;
+}
+
+.model-list.visible .model-row:nth-child(9) {
+    transition-delay: 0.5s;
+}
+
+.model-list.visible .model-row:nth-child(10) {
+    transition-delay: 0.55s;
+}
+
+.model-list.visible .model-row:nth-child(11) {
+    transition-delay: 0.6s;
+}
+
+.model-list.visible .model-row:nth-child(12) {
+    transition-delay: 0.65s;
+}
+
+/* Glow Effect for List Rows (Accessories & iPhone Models) */
+.model-row {
+    transition: 0.3s;
+    border-radius: 12px;
+    padding: 15px;
+    /* Ensure padding for hover bg */
+}
+
+.model-row:hover {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    transform: translateX(10px);
+    border-bottom-color: transparent !important;
+}
+
+.model-row:hover .model-name,
+.model-row:hover .model-price {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.model-row:hover .model-cap {
+    color: #ccc;
+}
+
+/* Enhanced Glow for Large Accessory Card */
+.acc-card.large {
+    transition: 0.4s;
+    border: 1px solid var(--border-dim);
+    /* Match other cards */
+}
+
+.acc-card.large:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-yellow);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.15);
+    /* Golden Glow */
 }
 
 /* Staggered Scroll Animations for Children */

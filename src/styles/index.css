@@ -1528,15 +1528,22 @@ footer {
         text-align: left;
     }
 
-    /* Map Responsive Fix */
+    /* Map Responsive Fix - HIDE ON MOBILE as requested */
     .map-container-premium {
-        min-height: 350px !important;
-        height: 350px !important;
-        width: 100% !important;
-        border-radius: 40px !important;
+        display: none !important;
     }
 
     .contact-section {
         padding: 80px 0 !important;
+    }
+
+    .contact-wrapper {
+        justify-content: center !important;
+    }
+
+    .contact-info-card {
+        width: 100% !important;
+        max-width: 600px !important;
+        margin: 0 auto !important;
     }
 }

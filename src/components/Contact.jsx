@@ -11,8 +11,8 @@ const Contact = () => {
     return (
         <section id="contact" className="section contact-section">
             <div className="container">
-                <div className="contact-wrapper fade-on-scroll visible">
-                    <div className="contact-info-card">
+                <div className="contact-wrapper fade-on-scroll visible" style={{ justifyContent: 'center' }}>
+                    <div className="contact-info-card" style={{ maxWidth: '800px', width: '100%' }}>
                         <div className="contact-info-header">
                             <h2>{t('contact.title')}</h2>
                             <p className="contact-subtitle">{t('contact.subtitle')}</p>
@@ -47,13 +47,6 @@ const Contact = () => {
                                 <i className="fa-brands fa-whatsapp"></i> {t('contact.whatsapp')}
                             </a>
                         </div>
-                    </div>
-
-                    <div className="map-container-premium">
-                        <iframe
-                            src={mapUrl}
-                            width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>

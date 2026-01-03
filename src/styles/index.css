@@ -1290,50 +1290,41 @@ footer {
 
 .contact-info-card {
     flex: 1;
-    background: rgba(13, 13, 13, 0.7);
-    backdrop-filter: blur(30px) saturate(180%);
-    -webkit-backdrop-filter: blur(30px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 70px;
-    border-radius: 50px;
-    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5);
+    background: #0d0d0d;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 60px;
+    border-radius: 40px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.02);
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
 
 .contact-info-header {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .contact-info-header h2 {
-    font-size: 56px;
-    font-weight: 900;
+    font-size: 48px;
+    font-weight: 800;
     margin-bottom: 15px;
-    background: linear-gradient(135deg, #ffffff 0%, #888888 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -3px;
-    line-height: 1;
+    color: #fff;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
 }
 
 .contact-subtitle {
-    color: #888;
-    font-size: 20px;
+    color: #666;
+    font-size: 18px;
     font-weight: 500;
 }
 
 .contact-details-list {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    margin-bottom: 60px;
-}
-
-.detail-item-premium {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
+    gap: 35px;
+    margin-bottom: 50px;
 }
 
 .detail-item-premium {
@@ -1343,84 +1334,76 @@ footer {
 }
 
 .detail-icon {
-    color: var(--accent-yellow);
-    font-size: 22px;
+    color: #fbd304;
+    font-size: 20px;
     margin-bottom: 5px;
-    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
 }
 
 .detail-label {
-    font-size: 22px;
+    font-size: 20px;
     color: #fff;
     font-weight: 800;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.2px;
 }
 
 .detail-value {
-    color: #eee;
-    font-size: 18px;
+    color: #999;
+    font-size: 17px;
     font-weight: 500;
-    line-height: 1.4;
-    opacity: 0.9;
+    line-height: 1.5;
 }
 
 .contact-actions-premium {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.btn-premium-outline {
-    border: 1px solid #fff;
-    background: transparent;
-    color: #fff;
-    padding: 22px 40px;
-    border-radius: 50px;
-    font-weight: 800;
-    text-align: center;
-    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 15px;
 }
 
-.btn-premium-outline i {
-    color: var(--accent-yellow);
+.btn-premium-outline {
+    border: 1.5px solid #fff;
+    background: transparent;
+    color: #fff;
+    padding: 18px 30px;
+    border-radius: 100px;
+    font-weight: 800;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 }
 
 .btn-premium-outline:hover {
-    background: #fff;
-    color: #000;
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    transform: scale(1.02);
 }
 
 .btn-premium-whatsapp {
-    background: linear-gradient(135deg, #25D366 30%, #128C7E 100%);
+    background: linear-gradient(90deg, #32d74b 0%, #1ea366 100%);
     color: #fff;
-    padding: 24px 40px;
-    border-radius: 50px;
+    padding: 20px 30px;
+    border-radius: 100px;
     font-weight: 800;
     text-align: center;
-    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 0.3s ease;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 14px;
-    box-shadow: 0 15px 50px rgba(37, 211, 102, 0.3);
+    letter-spacing: 1.5px;
+    font-size: 13px;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(50, 215, 75, 0.2);
 }
 
 .btn-premium-whatsapp:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 30px 60px rgba(37, 211, 102, 0.5);
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(50, 215, 75, 0.4);
 }
 
 .map-container-premium {

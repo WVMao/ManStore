@@ -12,7 +12,7 @@ const Accessories = () => {
                 <div className="accessories-grid">
                     {/* Large Feature Item */}
                     <div className="acc-card large fade-on-scroll visible">
-                        <img src="/assets/airpods.png" alt="AirPods Pro 2" className="acc-img-main" />
+                        <img src="assets/airpods.png" alt="AirPods Pro 2" className="acc-img-main" />
                         <div className="acc-details">
                             <h3>AirPods Pro 2</h3>
                             <p>Réduction de bruit active. Audio spatial.</p>
@@ -28,7 +28,7 @@ const Accessories = () => {
                     </div>
 
                     {/* Vertical List for others */}
-                    <div className="acc-list fade-on-scroll visible">
+                    <div className="model-list fade-on-scroll visible">
 
                         <AccessoryItem
                             icon="fa-solid fa-bolt"
@@ -130,19 +130,18 @@ const Accessories = () => {
 };
 
 const AccessoryItem = ({ icon, title, desc, price, waText }) => (
-    <div className="acc-list-item">
-        <div className="acc-icon"><i className={icon}></i></div>
-        <div className="acc-info">
-            <h4>{title}</h4>
-            <p>{desc}</p>
+    <div className="model-row" style={{ padding: '15px 0', borderBottom: '1px solid #333' }}>
+        <div className="model-info">
+            <span className="model-name" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <i className={icon} style={{ color: '#666', width: '20px' }}></i>
+                {title}
+            </span>
+            <span className="model-cap">{desc}</span>
         </div>
-        <div className="acc-action">
-            <span className="mini-price">{price}</span>
-            <a
-                href={`https://wa.me/237696193409?text=${waText}`}
-                className="btn-mini-wa"
-            >
-                <i className="fa-brands fa-whatsapp"></i> Commander
+        <div className="model-price-container">
+            <span className="model-price">{price}</span>
+            <a href={`https://wa.me/237696193409?text=${waText}`} className="btn-icon">
+                <i className="fa-brands fa-whatsapp"></i>
             </a>
         </div>
     </div>

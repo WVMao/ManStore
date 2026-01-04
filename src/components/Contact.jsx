@@ -43,7 +43,7 @@ const Contact = () => {
                                 target="_blank" className="btn-premium-outline">
                                 <i className="fa-solid fa-location-arrow"></i> {t('contact.directions')}
                             </a>
-                            <a href="https://wa.me/237696193409" className="btn-premium-whatsapp">
+                            <a href="https://wa.me/237696193409" className="btn-premium-whatsapp" target="_blank" rel="noopener noreferrer">
                                 <i className="fa-brands fa-whatsapp"></i> {t('contact.whatsapp')}
                             </a>
                         </div>

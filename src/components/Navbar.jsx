@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -61,6 +62,7 @@ const Navbar = () => {
                 </ul>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', position: 'relative' }}>
+                    <ThemeToggle />
                     <div style={{ position: 'relative' }}>
                         <button
                             onClick={() => setLangMenuOpen(!langMenuOpen)}

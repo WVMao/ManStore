@@ -14,11 +14,11 @@
 }
 
 body.light-mode {
-    --bg-color: #f5f5f7;
-    --card-bg: #ffffff;
-    --text-primary: #1d1d1f;
-    --text-secondary: #515151;
-    --border-dim: #d2d2d7;
+    --bg-color: #ffffff;
+    --card-bg: #f9f9f9;
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --border-dim: #e1e1e1;
     /* Keep accents but maybe adjust if needed, currently keeping same */
 }
 
@@ -284,9 +284,6 @@ body.light-mode .hero-section {
     100% {
         background-position: 0% 50%;
     }
-
-    background-position: 0% 50%;
-}
 }
 
 /* Theme Toggle Button */
@@ -585,6 +582,11 @@ body.light-mode .product-info h3 {
     text-align: left;
 }
 
+body.light-mode .model-list {
+    background: var(--card-bg);
+    border-color: var(--border-dim);
+}
+
 .model-row {
     display: flex;
     justify-content: space-between;
@@ -608,9 +610,17 @@ body.light-mode .model-row {
     font-size: 15px;
 }
 
+body.light-mode .model-name {
+    color: #000000 !important;
+}
+
 .model-cap {
     color: #999 !important;
     font-size: 13px;
+}
+
+body.light-mode .model-cap {
+    color: #555 !important;
 }
 
 .model-price {
@@ -619,6 +629,10 @@ body.light-mode .model-row {
     font-size: 15px;
     display: block;
     margin-right: 15px;
+}
+
+body.light-mode .model-price {
+    color: #000000 !important;
 }
 
 .model-price-container {
@@ -666,6 +680,12 @@ body.light-mode .model-row {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+body.light-mode .acc-card {
+    background: var(--card-bg);
+    border-color: var(--border-dim);
+    color: var(--text-primary);
 }
 
 .acc-card.large {
@@ -723,6 +743,11 @@ body.light-mode .acc-details h3 {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+body.light-mode .acc-list-item {
+    background: var(--card-bg);
+    border-color: var(--border-dim);
 }
 
 .acc-icon {
@@ -1300,6 +1325,11 @@ footer {
     overflow: hidden;
 }
 
+body.light-mode .testi-card {
+    background: var(--card-bg);
+    border-color: var(--border-dim);
+}
+
 .testi-card:hover {
     transform: translateY(-5px);
     border-color: #444;
@@ -1319,6 +1349,10 @@ footer {
     margin-bottom: 20px;
 }
 
+body.light-mode .testi-text {
+    color: #424245;
+}
+
 .testi-author {
     border-top: 1px solid #222;
     padding-top: 15px;
@@ -1330,6 +1364,10 @@ footer {
 .author-name {
     font-weight: 700;
     color: white;
+}
+
+body.light-mode .author-name {
+    color: #1d1d1f;
 }
 
 .author-loc {
@@ -1418,6 +1456,10 @@ footer {
     line-height: 1.1;
 }
 
+body.light-mode .contact-info-header h2 {
+    color: #1d1d1f;
+}
+
 .contact-subtitle {
     color: #666;
     font-size: 18px;
@@ -1450,11 +1492,19 @@ footer {
     letter-spacing: -0.2px;
 }
 
+body.light-mode .detail-label {
+    color: #1d1d1f;
+}
+
 .detail-value {
     color: #999;
     font-size: 17px;
     font-weight: 500;
     line-height: 1.5;
+}
+
+body.light-mode .detail-value {
+    color: #515151;
 }
 
 .contact-actions-premium {
@@ -1479,6 +1529,15 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 12px;
+}
+
+body.light-mode .btn-premium-outline {
+    border-color: #1d1d1f;
+    color: #1d1d1f;
+}
+
+body.light-mode .btn-premium-outline:hover {
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .btn-premium-outline:hover {
@@ -1535,6 +1594,10 @@ footer {
     width: 100%;
     height: 100%;
     filter: invert(90%) hue-rotate(180deg) grayscale(0.5) contrast(1.1) brightness(0.9);
+}
+
+body.light-mode .map-container-premium iframe {
+    filter: none;
 }
 
 @media (max-width: 1024px) {
